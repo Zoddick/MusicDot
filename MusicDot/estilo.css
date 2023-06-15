@@ -2,7 +2,6 @@ p {
     text-align: justify;
     text-decoration: none;
 }
-
 body {
     font-family: Helvetica, sans-serif;
     width: 940px;
@@ -10,66 +9,60 @@ body {
     margin-right: auto;
 }
 
-.titulo {
-    color: #3d3d3d;
-    background-color: #E1EDF2;
-    padding: 10px;
-}
 
-.subtitulo {
-    color: black;
+.botom_h2 {
     border-bottom: 2px solid #000;
-}
-
+    }
 figure {
+    text-align: center;
+    background-color: whitesmoke;
+    color: lightgray;
+}
+figure{
     margin: 30px;
     padding: 15px;
     text-align: center;
     background-color: whitesmoke;
     color: lightgray;
 }
-
+figure img {
+    width: 100%;
+}
 figcaption {
     padding-top: 10px;
 }
-
-#figure-matriz-musicdot {
+.matriz-da-musicdot{
     width: 550px;
     margin-left: auto;
     margin-right: auto;
 }
+.familia-tupfeln{
+    width: 250px;
+    float:right;
+}
+.titulo{
+    color: #3d3d3d;
+    background-color: #E1EDF2;
+    font-size: 32px;
 
-#figure-familia-tupfeln {
-    width: 275px;
-    float: right;
 }
 
-figure img {
-    width: 100%;
-}
-
-form div {
-    padding-top: 10px;
-}
-.campo-formulario {
+input{
     height: 30px;
     width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    margin: 10px;
+    margin-right: 0px;
 
-.botao-enviar {
-    background-color: white;
-    color: black;
-    width: 100px;
+}
+textarea{
+    margin: 10px;
+    width: 500px;
+}
+.enviar{
+    margin: 10px;
     height: 50px;
+    width: 100px;
+    background: white;
     font-weight: bold;
-}
-
-.contato-subtitulo {
-    display: inline;
-}
-.contato-info {
-    margin: 16px 0 24px;
-    padding-left: 32px;
+    border-color: #000;
 }
