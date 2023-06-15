@@ -1,65 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <title>MusicDot | Sobre a empresa</title>
-    <link rel="icon" href="img/favicon.ico">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>--Formulario Contato--</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
-    <a href="index.html">
-        <img src="img/logo.svg" alt="Logotipo da MusicDot">
-    </a>
-    <h1 class="titulo">Entre em contato</h1>
-    <form method="get" name="form-contato">
-        <div>
-            <input type="text" 
-                id="nome"
-                placeholder="Digite o seu nome completo" 
-                required="required" 
-                name="nome" 
-                class="campo-formulario" 
-            />
-            <label for="nome">Nome</label>
-        </div>
-        <div>
-            <input type="tel" 
-                id="telefone"
-                placeholder="(xx)xx-xx-xx-xx" 
-                required="required" 
-                name="telefone" 
-                class="campo-formulario" 
-            />
-            <label for="telefone">Fone</label>
-        </div>
-        <div>
-            <input type="email" 
-                id="email"
-                placeholder="fulano@mail.com" 
-                required="required" 
-                class="campo-formulario" 
-                name="email" 
-            />
-            <label for="email">Email</label>
-        </div>
-        <div>
-            <textarea 
-                name="opiniao"
-                placeholder="Deixe sua opinião"
-                required="required" 
-                class="campo-formulario"
-                style="height: 200px;"
-            ></textarea>
-        </div>
-        <div>
-            <input type="submit" 
-                class="botao-enviar" 
-                value="Enviar" 
-            />
-        </div>
-      </form>
-</body>
+    <img src="img/logo.svg" alt="logo">
+    
+    <h1 class="titulo"> 
+        Entre em contato
+    </h1>
 
+    <form name="form" action="" onsubmit="return validar()" method="post">
+        <div>
+            <input type="nome" name="nome" placeholder="..." required> 
+            <label for="nome">Nome </label>
+        </div>
+        
+
+        <div>
+            <input type="tel" name="fone" placeholder="(xx)xxxxxxxxx " required>
+            <label for="fone">Fone</label>
+        </div>
+
+
+        <div>
+            <input type="email" name="e-mail" placeholder="fulano@gmail.com"required> 
+            <label for="e-mail">Email:</label>
+        </div>
+
+
+        <div>
+            <textarea name="opiniao" id="" cols="70" rows="10" placeholder="Deixe sua opiniao"></textarea>
+        </div>
+
+
+        <div>
+            <input  type="submit"  class="enviar" name="enter"value="Enviar"/>
+        </div>
+         
+    </form>
+    <script>
+
+        function validar(){
+
+            var valido = document.forms["form"];
+            var nome = form["nome"].value;
+            var telefone = form ["fone"].value;
+            var email = form["e-mail"].value;
+            var opiniao = form["opiniao"].value;
+            var boolEmail = !validateEmail(email);
+
+            if (nome.length == ""|| nome.length < 9){
+                alert(" nome nao informado")
+                return false;
+            }
+            if (telefone.length == ""|| telefone.length == 10  ){
+                alert (" telefone nao informado");
+                return false;
+            }
+            if (boolEmail ){
+                alert (" email nao informado");
+                return false;
+            }
+            if(opiniao.length == ""|| opiniao.length >9 || email.length > 51){
+                return false;
+            }
+            return true;
+        }
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+            }
+    </script>
+</body>
 </html>
